@@ -38,6 +38,7 @@ export function ExerciseCard({ name, sets, reps, rest, onNoteChange }: ExerciseC
             onChange={handleNoteChange}
             placeholder="Egzersiz hakkında not ekleyin..."
             className="mt-1"
+            type="text" // Specify the type of input
           />
         </div>
       </CardFooter>
