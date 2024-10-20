@@ -8,7 +8,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   phases,
@@ -21,7 +20,7 @@ export default function WorkoutProgram() {
   const [selectedDays, setSelectedDays] = useState<number>(3);
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">
         Fonksiyonel Fitness ve Estetik Antrenman Programı
       </h1>
@@ -39,13 +38,8 @@ export default function WorkoutProgram() {
           </SelectContent>
         </Select>
       </div>
-      <Card>
-        <CardHeader>
-          <CardTitle>
-            {selectedDays} Günlük Fonksiyonel Fitness ve Estetik Programı
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
+      <div>
+        <div>
           <Tabs defaultValue="0">
             <TabsList className="grid w-full grid-cols-3">
               {phases.map((_, index) => (
@@ -67,8 +61,8 @@ export default function WorkoutProgram() {
               </TabsContent>
             ))}
           </Tabs>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 }

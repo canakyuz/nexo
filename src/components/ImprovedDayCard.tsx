@@ -15,27 +15,27 @@ interface ImprovedDayCardProps {
 
 export default function ImprovedDayCard({ day, program, selectedSplit, onSplitChange }: ImprovedDayCardProps) {
   const renderExercises = (exercises: Exercise[]) => {
-    return exercises.map((exercise, index) => (
-      <div key={exercise.name} className="mb-4 flex flex-row align-baseline items-center">
-        <div>
-          <Badge variant="default" className='rounded-full text-[1em] mr-3 h-9 w-9 text-center justify-center'>
+    return exercises.map((exercise, index) => (      
+      <div key={exercise.name} className="mb-4">
+        <div className="flex items-center mb-2">
+          <Badge variant="default" className='rounded-full text-sm mr-3 h-7 w-7 flex items-center justify-center flex-shrink-0'>
             {index + 1}
           </Badge>
+          <h4 className="text-sm sm:text-md font-semibold">{exercise.name}</h4>
         </div>
-        <div>
-          <h4 className="text-md font-semibold">{exercise.name}</h4>
-            <div>
-              <Badge className='mx-1 my-1' variant="destructive">
-                Set: {exercise.sets}
-              </Badge>
-              <Badge className='mx-1 my-1' variant="destructive">
-                Tekrar: {exercise.reps}
-              </Badge>
-              <Badge className='mx-1 my-1' variant="secondary">  
-                Dinlenme: {exercise.rest}
-              </Badge>
-            </div>
-          <Label>{ exercise.notes }</Label>
+        <div className="ml-10">
+          <div className="flex flex-wrap gap-2 mb-2">
+            <Badge className='text-xs sm:text-sm' variant="destructive">
+              Set: {exercise.sets}
+            </Badge>
+            <Badge className='text-xs sm:text-sm' variant="destructive">
+              Tekrar: {exercise.reps}
+            </Badge>
+            <Badge className='text-xs sm:text-sm' variant="secondary">  
+              Dinlenme: {exercise.rest}
+            </Badge>
+          </div>
+          <Label className="text-xs sm:text-sm text-muted-foreground">{exercise.notes}</Label>
         </div>
       </div>
     ));
@@ -43,13 +43,13 @@ export default function ImprovedDayCard({ day, program, selectedSplit, onSplitCh
 
   return (
     <Accordion type="single" collapsible className="w-full">
-      <Card className='px-3'>
+      <Card className='px-2 sm:px-3'>
         <AccordionItem value={`day-${day}`}>
-          <AccordionTrigger className="text-lg font-bold">{`Gün ${day}`}</AccordionTrigger>
+          <AccordionTrigger className="text-base sm:text-lg font-bold">{`Gün ${day}`}</AccordionTrigger>
           <AccordionContent>
             <div className="space-y-4">
               <Select value={selectedSplit} onValueChange={onSplitChange}>
-                <SelectTrigger className="w-full">
+                <SelectTrigger className="w-full text-sm sm:text-base">
                   <SelectValue placeholder="Bölünme seçin" />
                 </SelectTrigger>
                 <SelectContent>
@@ -60,17 +60,17 @@ export default function ImprovedDayCard({ day, program, selectedSplit, onSplitCh
               </Select>
 
               <Card>
-                <CardHeader>
-                  <CardTitle>Isınma</CardTitle>
+                <CardHeader className="py-3">
+                  <CardTitle className="text-sm sm:text-base">Isınma</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{program.warmup}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">{program.warmup}</p>
                 </CardContent>
               </Card>
 
               <Card>
-                <CardHeader>
-                  <CardTitle>Ana Antrenman</CardTitle>
+                <CardHeader className="py-3">
+                  <CardTitle className="text-sm sm:text-base">Ana Antrenman</CardTitle>
                 </CardHeader>
                 <CardContent>
                   {renderExercises(program.workoutSplits[selectedSplit].exercises)}
@@ -78,20 +78,20 @@ export default function ImprovedDayCard({ day, program, selectedSplit, onSplitCh
               </Card>
 
               <Card>
-                <CardHeader>
-                  <CardTitle>Finisher / Kardiyovasküler Çalışma</CardTitle>
+                <CardHeader className="py-3">
+                  <CardTitle className="text-sm sm:text-base">Finisher / Kardiyovasküler Çalışma</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{program.cardio}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">{program.cardio}</p>
                 </CardContent>
               </Card>
 
               <Card>
-                <CardHeader>
-                  <CardTitle>Soğuma</CardTitle>
+                <CardHeader className="py-3">
+                  <CardTitle className="text-sm sm:text-base">Soğuma</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{program.cooldown}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">{program.cooldown}</p>
                 </CardContent>
               </Card>
             </div>
