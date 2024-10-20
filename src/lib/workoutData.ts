@@ -22,127 +22,228 @@ export interface DayProgram {
 
 export const exercisePrograms: Record<number, DayProgram> = {
   1: {
-    warmup: "10 minutes light cardiovascular activity and dynamic stretching",
+    warmup: "10 dakika hafif kardiyovasküler aktivite ve dinamik germe",
     workoutSplits: {
       "Full Body": {
         name: "Full Body",
         exercises: [
           {
-            name: "Barbell Back Squat",
-            sets: 3,
-            reps: "8-10",
-            rest: "90 seconds",
-          },
-          { name: "Bench Press", sets: 3, reps: "8-10", rest: "90 seconds" },
-          { name: "Bent-over Row", sets: 3, reps: "10-12", rest: "60 seconds" },
-          { name: "Overhead Press", sets: 3, reps: "8-10", rest: "60 seconds" },
-          {
-            name: "Romanian Deadlift",
+            name: "Goblet Squat",
             sets: 3,
             reps: "10-12",
-            rest: "90 seconds",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve ağırlığı göğsünüze yakın tutun."
           },
-          { name: "Plank", sets: 3, reps: "30-60 seconds", rest: "30 seconds" },
+          {
+            name: "Dumbbell Bench Press",
+            sets: 3,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı geriye ve aşağıya doğru çekin."
+          },
+          {
+            name: "One-Arm Dumbbell Row",
+            sets: 3,
+            reps: "10-12 her kol",
+            rest: "60 saniye",
+            notes: "Sırtınızı düz tutun ve omurganızı nötr pozisyonda tutun."
+          },
+          {
+            name: "Wall Slides",
+            sets: 3,
+            reps: "12-15",
+            rest: "60 saniye",
+            notes: "Sırtınızı duvara yaslayın ve kollarınızı yavaşça kaldırıp indirin."
+          },
+          {
+            name: "Glute Bridge",
+            sets: 3,
+            reps: "12-15",
+            rest: "60 saniye",
+            notes: "Kalçalarınızı sıkarak yukarı kaldırın ve yavaşça indirin."
+          },
+          {
+            name: "Plank",
+            sets: 3,
+            reps: "30-45 saniye",
+            rest: "30 saniye",
+            notes: "Vücudunuzu düz bir çizgide tutun, kalçalarınızı düşürmeyin."
+          },
         ],
       },
       Push: {
         name: "Push",
         exercises: [
           {
-            name: "Incline Dumbbell Press",
+            name: "Dumbbell Shoulder Press",
             sets: 3,
             reps: "8-10",
-            rest: "60 seconds",
+            rest: "90 saniye",
+            notes: "Sırtınızı destekleyin ve omurganızı nötr pozisyonda tutun."
           },
           {
-            name: "Seated Shoulder Press",
+            name: "Incline Dumbbell Press",
             sets: 3,
             reps: "10-12",
-            rest: "60 seconds",
+            rest: "60 saniye",
+            notes: "Omuzlarınızı bench'e sabitleyin ve dirseklerinizi kontrollü indirin."
           },
-          { name: "Tricep Dips", sets: 3, reps: "12-15", rest: "45 seconds" },
-          { name: "Chest Flyes", sets: 3, reps: "12-15", rest: "45 seconds" },
           {
-            name: "Lateral Raises",
+            name: "Cable Chest Flyes",
             sets: 3,
             reps: "12-15",
-            rest: "45 seconds",
+            rest: "45 saniye",
+            notes: "Göğsünüzü sıkın ve kollarınızı yavaşça açın."
+          },
+          {
+            name: "Tricep Pushdowns",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi yanlarınıza sabit tutun."
+          },
+          {
+            name: "Face Pulls",
+            sets: 3,
+            reps: "15-20",
+            rest: "45 saniye",
+            notes: "Omuzlarınızı geriye doğru çekin ve sıkın."
           },
         ],
       },
       Pull: {
         name: "Pull",
         exercises: [
-          { name: "Deadlifts", sets: 3, reps: "6-8", rest: "120 seconds" },
           {
-            name: "Pull-ups or Lat Pulldown",
+            name: "Lat Pulldown",
             sets: 3,
-            reps: "8-10",
-            rest: "60 seconds",
+            reps: "10-12",
+            rest: "60 saniye",
+            notes: "Sırtınızı hafifçe arkaya yatırın ve göğsünüze doğru çekin."
           },
-          { name: "Barbell Rows", sets: 3, reps: "8-10", rest: "60 seconds" },
-          { name: "Face Pulls", sets: 3, reps: "12-15", rest: "45 seconds" },
-          { name: "Bicep Curls", sets: 3, reps: "10-12", rest: "45 seconds" },
+          {
+            name: "Seated Cable Row",
+            sets: 3,
+            reps: "10-12",
+            rest: "60 saniye",
+            notes: "Sırtınızı düz tutun ve omuzlarınızı geriye çekin."
+          },
+          {
+            name: "Dumbbell Bicep Curls",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi sabit tutun ve kontrollü hareket edin."
+          },
+          {
+            name: "Reverse Flyes",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Üst sırtınızı sıkın ve kollarınızı yanlara doğru kaldırın."
+          },
+          {
+            name: "Farmer's Walks",
+            sets: 3,
+            reps: "30 saniye",
+            rest: "45 saniye",
+            notes: "Omuzlarınızı geriye çekin ve düz bir çizgide yürüyün."
+          },
         ],
       },
       Upper: {
         name: "Upper",
         exercises: [
           {
-            name: "Incline Bench Press",
+            name: "Dumbbell Chest Press",
             sets: 3,
             reps: "8-10",
-            rest: "90 seconds",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı bench'e sabitleyin ve kontrollü hareket edin."
           },
           {
             name: "Seated Cable Row",
             sets: 3,
             reps: "10-12",
-            rest: "60 seconds",
+            rest: "60 saniye",
+            notes: "Sırtınızı düz tutun ve omuzlarınızı geriye çekin."
           },
-          { name: "Overhead Press", sets: 3, reps: "8-10", rest: "60 seconds" },
-          { name: "Lat Pulldown", sets: 3, reps: "10-12", rest: "60 seconds" },
           {
-            name: "Tricep Pushdown",
+            name: "Arnold Press",
+            sets: 3,
+            reps: "10-12",
+            rest: "60 saniye",
+            notes: "Hareketi yavaş ve kontrollü bir şekilde yapın."
+          },
+          {
+            name: "Lat Pulldown",
+            sets: 3,
+            reps: "10-12",
+            rest: "60 saniye",
+            notes: "Sırtınızı hafifçe arkaya yatırın ve göğsünüze doğru çekin."
+          },
+          {
+            name: "Tricep Pushdowns",
             sets: 3,
             reps: "12-15",
-            rest: "45 seconds",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi yanlarınıza sabit tutun."
           },
-          { name: "Bicep Curls", sets: 3, reps: "12-15", rest: "45 seconds" },
+          {
+            name: "Hammer Curls",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi sabit tutun ve kontrollü hareket edin."
+          },
         ],
       },
       Lower: {
         name: "Lower",
         exercises: [
-          { name: "Back Squats", sets: 3, reps: "6-8", rest: "120 seconds" },
+          {
+            name: "Goblet Squats",
+            sets: 3,
+            reps: "10-12",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve ağırlığı göğsünüze yakın tutun."
+          },
           {
             name: "Romanian Deadlifts",
             sets: 3,
-            reps: "8-10",
-            rest: "90 seconds",
+            reps: "10-12",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve kalçalarınızı geriye doğru itin."
           },
           {
-            name: "Walking Lunges",
+            name: "Bulgarian Split Squats",
             sets: 3,
-            reps: "10-12 each leg",
-            rest: "60 seconds",
+            reps: "10-12 her bacak",
+            rest: "60 saniye",
+            notes: "Ön bacağınızı dengeli bir şekilde yere basın."
           },
-          { name: "Leg Press", sets: 3, reps: "12-15", rest: "60 seconds" },
-          { name: "Calf Raises", sets: 3, reps: "15-20", rest: "45 seconds" },
           {
-            name: "Planks",
+            name: "Leg Press",
             sets: 3,
-            reps: "30-60 seconds",
-            rest: "30 seconds",
+            reps: "12-15",
+            rest: "60 saniye",
+            notes: "Sırtınızı koltuğa yaslayın ve kontrollü hareket edin."
+          },
+          {
+            name: "Standing Calf Raises",
+            sets: 3,
+            reps: "15-20",
+            rest: "45 saniye",
+            notes: "Hareketin en üst noktasında bir an durun."
           },
         ],
       },
     },
-    cardio: "20 minutes moderate-intensity running or cycling",
-    cooldown: "10 minutes static stretching",
+    cardio: "15 dakika düşük etkili yürüyüş veya yüzme",
+    cooldown: "10 dakika statik germe ve derin nefes egzersizleri",
   },
   2: {
-    warmup: "10 minutes dynamic stretching and light plyometric movements",
+    warmup: "10 dakika dinamik germe ve hafif pilates hareketleri",
     workoutSplits: {
       "Full Body": {
         name: "Full Body",
@@ -150,28 +251,44 @@ export const exercisePrograms: Record<number, DayProgram> = {
           {
             name: "Dumbbell Lunges",
             sets: 3,
-            reps: "10-12 each leg",
-            rest: "60 seconds",
+            reps: "10-12 her bacak",
+            rest: "60 saniye",
+            notes: "Adımlarınızı kontrollü atın ve dik durun."
           },
-          { name: "Push-ups", sets: 3, reps: "12-15", rest: "45 seconds" },
+          {
+            name: "Push-ups",
+            sets: 3,
+            reps: "10-15",
+            rest: "45 saniye",
+            notes: "Vücudunuzu düz bir çizgide tutun, gerekirse dizlerinizin üzerinde yapın."
+          },
           {
             name: "Dumbbell Rows",
             sets: 3,
-            reps: "10-12 each arm",
-            rest: "45 seconds",
+            reps: "10-12 her kol",
+            rest: "45 saniye",
+            notes: "Sırtınızı düz tutun ve dirseğinizi yukarı çekin."
           },
           {
-            name: "Dumbbell Shoulder Press",
+            name: "Wall Slides",
             sets: 3,
-            reps: "10-12",
-            rest: "60 seconds",
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Sırtınızı duvara yaslayın ve kollarınızı yavaşça kaldırıp indirin."
           },
-          { name: "Goblet Squats", sets: 3, reps: "12-15", rest: "60 seconds" },
           {
-            name: "Russian Twists",
+            name: "Glute Bridge",
             sets: 3,
-            reps: "20 total",
-            rest: "30 seconds",
+            reps: "12-15",
+            rest: "60 saniye",
+            notes: "Kalçalarınızı sıkarak yukarı kaldırın ve yavaşça indirin."
+          },
+          {
+            name: "Bird Dog",
+            sets: 3,
+            reps: "10 her taraf",
+            rest: "30 saniye",
+            notes: "Karşıt kol ve bacağı aynı anda kaldırın, dengenizi koruyun."
           },
         ],
       },
@@ -182,26 +299,36 @@ export const exercisePrograms: Record<number, DayProgram> = {
             name: "Dumbbell Bench Press",
             sets: 3,
             reps: "10-12",
-            rest: "60 seconds",
+            rest: "60 saniye",
+            notes: "Omuzlarınızı bench'e sabitleyin ve kontrollü hareket edin."
           },
-          { name: "Arnold Press", sets: 3, reps: "10-12", rest: "60 seconds" },
+          {
+            name: "Seated Dumbbell Shoulder Press",
+            sets: 3,
+            reps: "10-12",
+            rest: "60 saniye",
+            notes: "Sırtınızı destekleyin ve omurganızı nötr pozisyonda tutun."
+          },
           {
             name: "Incline Push-ups",
             sets: 3,
             reps: "12-15",
-            rest: "45 seconds",
+            rest: "45 saniye",
+            notes: "Ellerinizi yüksek bir yüzeye koyun, vücudunuzu düz tutun."
           },
           {
-            name: "Dumbbell Flyes",
+            name: "Cable Flyes",
             sets: 3,
             reps: "12-15",
-            rest: "45 seconds",
+            rest: "45 saniye",
+            notes: "Göğsünüzü sıkın ve kollarınızı yavaşça açın."
           },
           {
             name: "Tricep Overhead Extension",
             sets: 3,
             reps: "12-15",
-            rest: "45 seconds",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi başınızın yanında sabit tutun."
           },
         ],
       },
@@ -209,24 +336,39 @@ export const exercisePrograms: Record<number, DayProgram> = {
         name: "Pull",
         exercises: [
           {
-            name: "Chin-ups or Assisted Chin-ups",
+            name: "Assisted Pull-ups",
             sets: 3,
             reps: "8-10",
-            rest: "60 seconds",
+            rest: "60 saniye",
+            notes: "Omuzlarınızı geriye ve aşağıya doğru çekin."
           },
           {
             name: "One-Arm Dumbbell Rows",
             sets: 3,
-            reps: "10-12 each arm",
-            rest: "45 seconds",
+            reps: "10-12 her kol",
+            rest: "45 saniye",
+            notes: "Sırtınızı düz tutun ve dirseğinizi yukarı çekin."
           },
-          { name: "Face Pulls", sets: 3, reps: "15-20", rest: "45 seconds" },
-          { name: "Hammer Curls", sets: 3, reps: "12-15", rest: "45 seconds" },
           {
-            name: "Back Extensions",
+            name: "Face Pulls",
+            sets: 3,
+            reps: "15-20",
+            rest: "45 saniye",
+            notes: "Omuzlarınızı geriye doğru çekin ve sıkın."
+          },
+          {
+            name: "Hammer Curls",
             sets: 3,
             reps: "12-15",
-            rest: "45 seconds",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi sabit tutun ve kontrollü hareket edin."
+          },
+          {
+            name: "Reverse Flyes",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Üst sırtınızı sıkın ve kollarınızı yanlara doğru kaldırın."
           },
         ],
       },
@@ -237,26 +379,36 @@ export const exercisePrograms: Record<number, DayProgram> = {
             name: "Dumbbell Chest Press",
             sets: 3,
             reps: "10-12",
-            rest: "60 seconds",
+            rest: "60 saniye",
+            notes: "Omuzlarınızı bench'e sabitleyin ve kontrollü hareket edin."
           },
           {
-            name: "Bent-Over Dumbbell Rows",
+            name: "Seated Cable Row",
             sets: 3,
             reps: "10-12",
-            rest: "60 seconds",
+            rest: "60 saniye",
+            notes: "Sırtınızı düz tutun ve omuzlarınızı geriye çekin."
           },
           {
             name: "Lateral Raises",
             sets: 3,
             reps: "12-15",
-            rest: "45 seconds",
+            rest: "45 saniye",
+            notes: "Kollarınızı yavaşça kaldırın, dirseklerinizi hafif bükün."
           },
-          { name: "Tricep Dips", sets: 3, reps: "12-15", rest: "45 seconds" },
           {
-            name: "Dumbbell Curls",
+            name: "Tricep Dips",
+            sets: 3,
+            reps: "10-15",
+            rest: "45 saniye",
+            notes: "Omuzlarınızı aşağıda tutun, gerekirse ayaklarınızı yerden kaldırmayın."
+          },
+          {
+            name: "Bicep Curls",
             sets: 3,
             reps: "12-15",
-            rest: "45 seconds",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi  sabit tutun ve kontrollü hareket edin."
           },
         ],
       },
@@ -264,357 +416,93 @@ export const exercisePrograms: Record<number, DayProgram> = {
         name: "Lower",
         exercises: [
           {
-            name: "Dumbbell Squats",
+            name: "Bodyweight Squats",
             sets: 3,
-            reps: "10-12",
-            rest: "90 seconds",
+            reps: "15-20",
+            rest: "60 saniye",
+            notes: "Ayaklarınızı omuz genişliğinde açın, sırtınızı düz tutun."
           },
           {
-            name: "Dumbbell Romanian Deadlifts",
+            name: "Romanian Deadlifts",
             sets: 3,
             reps: "10-12",
-            rest: "60 seconds",
-          },
-          {
-            name: "Bulgarian Split Squats",
-            sets: 3,
-            reps: "10-12 each leg",
-            rest: "60 seconds",
+            rest: "60 saniye",
+            notes: "Sırtınızı düz tutun ve kalçalarınızı geriye doğru itin."
           },
           {
             name: "Step-ups",
             sets: 3,
-            reps: "12-15 each leg",
-            rest: "45 seconds",
+            reps: "12-15 her bacak",
+            rest: "45 saniye",
+            notes: "Yüksekliği rahat olduğunuz seviyede tutun."
           },
-          { name: "Calf Raises", sets: 3, reps: "15-20", rest: "30 seconds" },
+          {
+            name: "Glute Bridge",
+            sets: 3,
+            reps: "15-20",
+            rest: "45 saniye",
+            notes: "Kalçalarınızı sıkarak yukarı kaldırın ve yavaşça indirin."
+          },
+          {
+            name: "Calf Raises",
+            sets: 3,
+            reps: "15-20",
+            rest: "30 saniye",
+            notes: "Hareketin en üst noktasında bir an durun."
+          },
         ],
       },
     },
-    cardio:
-      "20 minutes HIIT: 30 seconds high intensity, 30 seconds rest (10 rounds)",
-    cooldown: "10 minutes static stretching and foam rolling",
+    cardio: "20 dakika tempolu yürüyüş veya düşük etkili aerobik",
+    cooldown: "10 dakika statik germe ve foam rolling",
   },
   3: {
-    warmup: "10 minutes light jogging and dynamic stretching",
+    warmup: "10 dakika hafif koşu ve dinamik germe",
     workoutSplits: {
       "Full Body": {
         name: "Full Body",
         exercises: [
-          { name: "Barbell Squats", sets: 4, reps: "6-8", rest: "120 seconds" },
           {
-            name: "Incline Bench Press",
+            name: "Goblet Squats",
             sets: 4,
             reps: "8-10",
-            rest: "90 seconds",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve ağırlığı göğsünüze yakın tutun."
           },
           {
-            name: "Weighted Pull-ups",
+            name: "Dumbbell Bench Press",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı bench'e sabitleyin ve kontrollü hareket edin."
+          },
+          {
+            name: "Assisted Pull-ups",
             sets: 3,
-            reps: "6-8",
-            rest: "90 seconds",
+            reps: "8-10",
+            rest: "60 saniye",
+            notes: "Omuzlarınızı geriye ve aşağıya doğru çekin."
           },
           {
             name: "Dumbbell Shoulder Press",
             sets: 3,
             reps: "8-10",
-            rest: "60 seconds",
+            rest: "60 saniye",
+            notes: "Sırtınızı destekleyin ve omurganızı nötr pozisyonda tutun."
           },
           {
-            name: "Barbell Hip Thrusts",
-            sets: 3,
-            reps: "10-12",
-            rest: "60 seconds",
-          },
-          {
-            name: "Hanging Leg Raises",
+            name: "Glute Bridge",
             sets: 3,
             reps: "12-15",
-            rest: "45 seconds",
+            rest: "60 saniye",
+            notes: "Kalçalarınızı sıkarak yukarı kaldırın ve yavaşça indirin."
           },
-        ],
-      },
-      Push: {
-        name: "Push",
-        exercises: [
           {
-            name: "Barbell Bench Press",
-            sets: 4,
-            reps: "6-8",
-            rest: "120 seconds",
-          },
-          { name: "Military Press", sets: 4, reps: "6-8", rest: "90 seconds" },
-          {
-            name: "Incline Dumbbell Press",
+            name: "Plank",
             sets: 3,
-            reps: "8-10",
-            rest: "60 seconds",
-          },
-          { name: "Cable Flyes", sets: 3, reps: "10-12", rest: "45 seconds" },
-          {
-            name: "Skull Crushers",
-            sets: 3,
-            reps: "10-12",
-            rest: "45 seconds",
-          },
-        ],
-      },
-      Pull: {
-        name: "Pull",
-        exercises: [
-          { name: "Barbell Rows", sets: 4, reps: "6-8", rest: "90 seconds" },
-          {
-            name: "Weighted Pull-ups",
-            sets: 4,
-            reps: "6-8",
-            rest: "90 seconds",
-          },
-          { name: "T-Bar Rows", sets: 3, reps: "8-10", rest: "60 seconds" },
-          { name: "Face Pulls", sets: 3, reps: "12-15", rest: "45 seconds" },
-          { name: "Barbell Curls", sets: 3, reps: "8-10", rest: "60 seconds" },
-        ],
-      },
-      Upper: {
-        name: "Upper",
-        exercises: [
-          {
-            name: "Barbell Bench Press",
-            sets: 4,
-            reps: "6-8",
-            rest: "120 seconds",
-          },
-          {
-            name: "Weighted Pull-ups",
-            sets: 4,
-            reps: "6-8",
-            rest: "90 seconds",
-          },
-          {
-            name: "Seated Dumbbell Shoulder Press",
-            sets: 3,
-            reps: "8-10",
-            rest: "60 seconds",
-          },
-          { name: "Cable Rows", sets: 3, reps: "10-12", rest: "60 seconds" },
-          { name: "Dips", sets: 3, reps: "10-12", rest: "45 seconds" },
-          { name: "EZ-Bar Curls", sets: 3, reps: "10-12", rest: "45 seconds" },
-        ],
-      },
-      Lower: {
-        name: "Lower",
-        exercises: [
-          { name: "Barbell Squats", sets: 4, reps: "6-8", rest: "120 seconds" },
-          {
-            name: "Romanian Deadlifts",
-            sets: 4,
-            reps: "8-10",
-            rest: "90 seconds",
-          },
-          { name: "Leg Press", sets: 3, reps: "10-12", rest: "60 seconds" },
-          {
-            name: "Walking Lunges",
-            sets: 3,
-            reps: "10-12 each leg",
-            rest: "60 seconds",
-          },
-          {
-            name: "Seated Calf Raises",
-            sets: 4,
-            reps: "12-15",
-            rest: "30 seconds",
-          },
-        ],
-      },
-    },
-    cardio:
-      "20 minutes Metabolic Circuit: 45 seconds work, 15 seconds rest (8 rounds) - Burpee, Mountain Climber, Kettlebell Swing, Jump Rope",
-    cooldown: "10 minutes yoga-based stretching exercises",
-  },
-  4: {
-    warmup: "10 minutes elliptical machine and dynamic stretching",
-    workoutSplits: {
-      "Full Body": {
-        name: "Full Body",
-        exercises: [
-          { name: "Front Squats", sets: 4, reps: "6-8", rest: "120 seconds" },
-          { name: "Weighted Dips", sets: 4, reps: "6-8", rest: "90 seconds" },
-          { name: "Pendlay Rows", sets: 4, reps: "6-8", rest: "90 seconds" },
-          {
-            name: "Standing Overhead Press",
-            sets: 3,
-            reps: "8-10",
-            rest: "60 seconds",
-          },
-          {
-            name: "Dumbbell Walking Lunges",
-            sets: 3,
-            reps: "10-12 each leg",
-            rest: "60 seconds",
-          },
-          {
-            name: "Cable Crunches",
-            sets: 3,
-            reps: "12-15",
-            rest: "45 seconds",
-          },
-        ],
-      },
-      Push: {
-        name: "Push",
-        exercises: [
-          {
-            name: "Incline Barbell Bench Press",
-            sets: 4,
-            reps: "6-8",
-            rest: "120 seconds",
-          },
-          {
-            name: "Seated Dumbbell Shoulder Press",
-            sets: 4,
-            reps: "8-10",
-            rest: "90 seconds",
-          },
-          {
-            name: "Close-Grip Bench Press",
-            sets: 3,
-            reps: "8-10",
-            rest: "60 seconds",
-          },
-          {
-            name: "Cable Lateral Raises",
-            sets: 3,
-            reps: "12-15",
-            rest: "45 seconds",
-          },
-          {
-            name: "Overhead Tricep Extension",
-            sets: 3,
-            reps: "10-12",
-            rest: "45 seconds",
-          },
-        ],
-      },
-      Pull: {
-        name: "Pull",
-        exercises: [
-          { name: "Deadlifts", sets: 4, reps: "5-6", rest: "180 seconds" },
-          {
-            name: "Weighted Chin-ups",
-            sets: 4,
-            reps: "6-8",
-            rest: "90 seconds",
-          },
-          {
-            name: "Seated Cable Rows",
-            sets: 3,
-            reps: "8-10",
-            rest: "60 seconds",
-          },
-          {
-            name: "Dumbbell Shrugs",
-            sets: 3,
-            reps: "12-15",
-            rest: "45 seconds",
-          },
-          {
-            name: "Preacher Curls",
-            sets: 3,
-            reps: "10-12",
-            rest: "45 seconds",
-          },
-        ],
-      },
-      Upper: {
-        name: "Upper",
-        exercises: [
-          {
-            name: "Incline Dumbbell Press",
-            sets: 4,
-            reps: "8-10",
-            rest: "90 seconds",
-          },
-          { name: "Lat Pulldowns", sets: 4, reps: "8-10", rest: "90 seconds" },
-          {
-            name: "Machine Shoulder Press",
-            sets: 3,
-            reps: "10-12",
-            rest: "60 seconds",
-          },
-          { name: "Face Pulls", sets: 3, reps: "12-15", rest: "45 seconds" },
-          {
-            name: "Cable Tricep Pushdowns",
-            sets: 3,
-            reps: "12-15",
-            rest: "45 seconds",
-          },
-          { name: "Hammer Curls", sets: 3, reps: "12-15", rest: "45 seconds" },
-        ],
-      },
-      Lower: {
-        name: "Lower",
-        exercises: [
-          { name: "Hack Squats", sets: 4, reps: "8-10", rest: "120 seconds" },
-          {
-            name: "Stiff-Legged Deadlifts",
-            sets: 4,
-            reps: "8-10",
-            rest: "90 seconds",
-          },
-          {
-            name: "Leg Extensions",
-            sets: 3,
-            reps: "12-15",
-            rest: "45 seconds",
-          },
-          { name: "Leg Curls", sets: 3, reps: "12-15", rest: "45 seconds" },
-          {
-            name: "Standing Calf Raises",
-            sets: 4,
-            reps: "15-20",
-            rest: "30 seconds",
-          },
-        ],
-      },
-    },
-    cardio: "20 minutes Tabata protocol (20 seconds work, 10 seconds rest)",
-    cooldown: "10 minutes static stretching and deep breathing exercises",
-  },
-  5: {
-    warmup: "10 minutes yoga-based movements and dynamic stretching",
-    workoutSplits: {
-      "Full Body": {
-        name: "Full Body",
-        exercises: [
-          {
-            name: "Trap Bar Deadlifts",
-            sets: 4,
-            reps: "6-8",
-            rest: "120 seconds",
-          },
-          {
-            name: "Incline Dumbbell Press",
-            sets: 4,
-            reps: "8-10",
-            rest: "90 seconds",
-          },
-          {
-            name: "Bulgarian Split Squats",
-            sets: 3,
-            reps: "10-12 each leg",
-            rest: "60 seconds",
-          },
-          { name: "Pull-ups", sets: 3, reps: "8-10", rest: "60 seconds" },
-          {
-            name: "Dumbbell Lateral Raises",
-            sets: 3,
-            reps: "12-15",
-            rest: "45 seconds",
-          },
-          {
-            name: "Ab Wheel Rollouts",
-            sets: 3,
-            reps: "10-12",
-            rest: "45 seconds",
+            reps: "30-45 saniye",
+            rest: "45 saniye",
+            notes: "Vücudunuzu düz bir çizgide tutun, kalçalarınızı düşürmeyin."
           },
         ],
       },
@@ -625,46 +513,76 @@ export const exercisePrograms: Record<number, DayProgram> = {
             name: "Dumbbell Bench Press",
             sets: 4,
             reps: "8-10",
-            rest: "90 seconds",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı bench'e sabitleyin ve kontrollü hareket edin."
           },
-          { name: "Push Press", sets: 4, reps: "6-8", rest: "90 seconds" },
           {
-            name: "Landmine Press",
+            name: "Seated Dumbbell Shoulder Press",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Sırtınızı destekleyin ve omurganızı nötr pozisyonda tutun."
+          },
+          {
+            name: "Incline Dumbbell Press",
             sets: 3,
-            reps: "10-12 each arm",
-            rest: "60 seconds",
+            reps: "10-12",
+            rest: "60 saniye",
+            notes: "Omuzlarınızı bench'e sabitleyin ve dirseklerinizi kontrollü indirin."
           },
-          { name: "Cable Flyes", sets: 3, reps: "12-15", rest: "45 seconds" },
           {
-            name: "Tricep Rope Pushdowns",
+            name: "Cable Flyes",
             sets: 3,
             reps: "12-15",
-            rest: "45 seconds",
+            rest: "45 saniye",
+            notes: "Göğsünüzü sıkın ve kollarınızı yavaşça açın."
+          },
+          {
+            name: "Tricep Pushdowns",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi yanlarınıza sabit tutun."
           },
         ],
       },
       Pull: {
         name: "Pull",
         exercises: [
-          { name: "Rack Pulls", sets: 4, reps: "6-8", rest: "120 seconds" },
           {
-            name: "Chest-Supported Rows",
+            name: "Assisted Pull-ups",
+            sets: 4,
+            reps: "6-8",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı geriye ve aşağıya doğru çekin."
+          },
+          {
+            name: "Seated Cable Row",
             sets: 4,
             reps: "8-10",
-            rest: "90 seconds",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve omuzlarınızı geriye çekin."
           },
           {
-            name: "Single-Arm Dumbbell Rows",
+            name: "One-Arm Dumbbell Row",
             sets: 3,
-            reps: "10-12 each arm",
-            rest: "60 seconds",
+            reps: "10-12 her kol",
+            rest: "60 saniye",
+            notes: "Sırtınızı düz tutun ve dirseğinizi yukarı çekin."
           },
-          { name: "Reverse Flyes", sets: 3, reps: "12-15", rest: "45 seconds" },
           {
-            name: "Incline Dumbbell Curls",
+            name: "Face Pulls",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Omuzlarınızı geriye doğru çekin ve sıkın."
+          },
+          {
+            name: "Hammer Curls",
             sets: 3,
             reps: "10-12",
-            rest: "45 seconds",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi sabit tutun ve kontrollü hareket edin."
           },
         ],
       },
@@ -672,64 +590,541 @@ export const exercisePrograms: Record<number, DayProgram> = {
         name: "Upper",
         exercises: [
           {
-            name: "Neutral-Grip Bench Press",
+            name: "Dumbbell Bench Press",
             sets: 4,
             reps: "8-10",
-            rest: "90 seconds",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı bench'e sabitleyin ve kontrollü hareket edin."
           },
-          { name: "Chin-ups", sets: 4, reps: "6-8", rest: "90 seconds" },
-          { name: "Arnold Press", sets: 3, reps: "10-12", rest: "60 seconds" },
           {
-            name: "Supinated Grip Lat Pulldowns",
+            name: "Assisted Pull-ups",
+            sets: 4,
+            reps: "6-8",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı geriye ve aşağıya doğru çekin."
+          },
+          {
+            name: "Seated Dumbbell Shoulder Press",
+            sets: 3,
+            reps: "8-10",
+            rest: "60 saniye",
+            notes: "Sırtınızı destekleyin ve omurganızı nötr pozisyonda tutun."
+          },
+          {
+            name: "Cable Rows",
             sets: 3,
             reps: "10-12",
-            rest: "60 seconds",
+            rest: "60 saniye",
+            notes: "Sırtınızı düz tutun ve omuzlarınızı geriye çekin."
           },
           {
-            name: "Cable Tricep Kickbacks",
+            name: "Tricep Pushdowns",
             sets: 3,
             reps: "12-15",
-            rest: "45 seconds",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi yanlarınıza sabit tutun."
           },
-          { name: "Zottman Curls", sets: 3, reps: "10-12", rest: "45 seconds" },
+          {
+            name: "Bicep Curls",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi sabit tutun ve kontrollü hareket edin."
+          },
         ],
       },
       Lower: {
         name: "Lower",
         exercises: [
           {
-            name: "Safety Bar Squats",
+            name: "Goblet Squats",
             sets: 4,
-            reps: "6-8",
-            rest: "120 seconds",
-          },
-          { name: "Good Mornings", sets: 4, reps: "8-10", rest: "90 seconds" },
-          { name: "Leg Press", sets: 3, reps: "12-15", rest: "60 seconds" },
-          {
-            name: "Nordic Hamstring Curls",
-            sets: 3,
             reps: "8-10",
-            rest: "60 seconds",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve ağırlığı göğsünüze yakın tutun."
           },
           {
-            name: "Single-Leg Calf Raises",
+            name: "Romanian Deadlifts",
             sets: 4,
-            reps: "12-15 each leg",
-            rest: "30 seconds",
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve kalçalarınızı geriye doğru itin."
+          },
+          {
+            name: "Walking Lunges",
+            sets: 3,
+            reps: "10-12 her bacak",
+            rest: "60 saniye",
+            notes: "Adımlarınızı kontrollü atın ve dik durun."
+          },
+          {
+            name: "Leg Press",
+            sets: 3,
+            reps: "12-15",
+            rest: "60 saniye",
+            notes: "Sırtınızı koltuğa yaslayın ve kontrollü hareket edin."
+          },
+          {
+            name: "Standing Calf Raises",
+            sets: 4,
+            reps: "15-20",
+            rest: "30 saniye",
+            notes: "Hareketin en üst noktasında bir an durun."
           },
         ],
       },
     },
-    cardio:
-      "20 minutes low-intensity cardiovascular activity (walking or light swimming)",
-    cooldown: "10 minutes meditation and breathing exercises",
+    cardio: "20 dakika interval yürüyüş (1 dakika hızlı, 1 dakika normal tempo)",
+    cooldown: "10 dakika yoga temelli germe egzersizleri",
+  },
+  4: {
+    warmup: "10 dakika eliptik bisiklet ve dinamik germe",
+    workoutSplits: {
+      "Full Body": {
+        name: "Full Body",
+        exercises: [
+          {
+            name: "Goblet Squats",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve ağırlığı göğsünüze yakın tutun."
+          },
+          {
+            name: "Push-ups",
+            sets: 4,
+            reps: "10-15",
+            rest: "60 saniye",
+            notes: "Vücudunuzu düz bir çizgide tutun, gerekirse dizlerinizin üzerinde yapın."
+          },
+          {
+            name: "Seated Cable Row",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve omuzlarınızı geriye çekin."
+          },
+          {
+            name: "Dumbbell Shoulder Press",
+            sets: 3,
+            reps: "8-10",
+            rest: "60 saniye",
+            notes: "Sırtınızı destekleyin ve omurganızı nötr pozisyonda tutun."
+          },
+          {
+            name: "Walking Lunges",
+            sets: 3,
+            reps: "10-12 her bacak",
+            rest: "60 saniye",
+            notes: "Adımlarınızı kontrollü atın ve dik durun."
+          },
+          {
+            name: "Plank",
+            sets: 3,
+            reps: "30-45 saniye",
+            rest: "45 saniye",
+            notes: "Vücudunuzu düz bir çizgide tutun, kalçalarınızı düşürmeyin."
+          },
+        ],
+      },
+      Push: {
+        name: "Push",
+        exercises: [
+          {
+            name: "Incline Dumbbell Bench Press",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı bench'e sabitleyin ve dirseklerinizi kontrollü indirin."
+          },
+          {
+            name: "Seated Dumbbell Shoulder Press",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Sırtınızı destekleyin ve omurganızı nötr pozisyonda tutun."
+          },
+          {
+            name: "Cable Chest Flyes",
+            sets: 3,
+            reps: "10-12",
+            rest: "60 saniye",
+            notes: "Göğsünüzü sıkın ve kollarınızı yavaşça açın."
+          },
+          {
+            name: "Lateral Raises",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Kollarınızı yavaşça kaldırın, dirseklerinizi hafif bükün."
+          },
+          {
+            name: "Tricep Pushdowns",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi yanlarınıza sabit tutun."
+          },
+        ],
+      },
+      Pull: {
+        name: "Pull",
+        exercises: [
+          {
+            name: "Assisted Pull-ups",
+            sets: 4,
+            reps: "6-8",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı geriye ve aşağıya doğru çekin."
+          },
+          {
+            name: "Seated Cable Row",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve omuzlarınızı geriye çekin."
+          },
+          {
+            name: "Face Pulls",
+            sets: 3,
+            reps: "12-15",
+            rest: "60 saniye",
+            notes: "Omuzlarınızı geriye doğru çekin ve sıkın."
+          },
+          {
+            name: "Dumbbell Shrugs",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Omuzlarınızı kulaklarınıza doğru kaldırın ve yavaşça indirin."
+          },
+          {
+            name: "Hammer Curls",
+            sets: 3,
+            reps: "10-12",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi sabit tutun ve kontrollü hareket edin."
+          },
+        ],
+      },
+      Upper: {
+        name: "Upper",
+        exercises: [
+          {
+            name: "Dumbbell Bench Press",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı bench'e sabitleyin ve kontrollü hareket edin."
+          },
+          {
+            name: "Lat Pulldowns",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "S ırtınızı hafifçe arkaya yatırın ve göğsünüze doğru çekin."
+          },
+          {
+            name: "Seated Dumbbell Shoulder Press",
+            sets: 3,
+            reps: "8-10",
+            rest: "60 saniye",
+            notes: "Sırtınızı destekleyin ve omurganızı nötr pozisyonda tutun."
+          },
+          {
+            name: "One-Arm Dumbbell Row",
+            sets: 3,
+            reps: "10-12 her kol",
+            rest: "60 saniye",
+            notes: "Sırtınızı düz tutun ve dirseğinizi yukarı çekin."
+          },
+          {
+            name: "Tricep Overhead Extension",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi başınızın yanında sabit tutun."
+          },
+          {
+            name: "Bicep Curls",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi sabit tutun ve kontrollü hareket edin."
+          },
+        ],
+      },
+      Lower: {
+        name: "Lower",
+        exercises: [
+          {
+            name: "Goblet Squats",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve ağırlığı göğsünüze yakın tutun."
+          },
+          {
+            name: "Romanian Deadlifts",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve kalçalarınızı geriye doğru itin."
+          },
+          {
+            name: "Bulgarian Split Squats",
+            sets: 3,
+            reps: "10-12 her bacak",
+            rest: "60 saniye",
+            notes: "Ön bacağınızı dengeli bir şekilde yere basın."
+          },
+          {
+            name: "Leg Press",
+            sets: 3,
+            reps: "12-15",
+            rest: "60 saniye",
+            notes: "Sırtınızı koltuğa yaslayın ve kontrollü hareket edin."
+          },
+          {
+            name: "Standing Calf Raises",
+            sets: 4,
+            reps: "15-20",
+            rest: "30 saniye",
+            notes: "Hareketin en üst noktasında bir an durun."
+          },
+        ],
+      },
+    },
+    cardio: "25 dakika tempolu yüzme veya su aerobiği",
+    cooldown: "10 dakika foam rolling ve statik germe",
+  },
+  5: {
+    warmup: "10 dakika ip atlama ve dinamik germe",
+    workoutSplits: {
+      "Full Body": {
+        name: "Full Body",
+        exercises: [
+          {
+            name: "Dumbbell Squats",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Ağırlıkları yanlarınızda tutun, sırtınızı düz tutun."
+          },
+          {
+            name: "Incline Dumbbell Bench Press",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı bench'e sabitleyin ve dirseklerinizi kontrollü indirin."
+          },
+          {
+            name: "Assisted Pull-ups",
+            sets: 4,
+            reps: "6-8",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı geriye ve aşağıya doğru çekin."
+          },
+          {
+            name: "Dumbbell Shoulder Press",
+            sets: 3,
+            reps: "8-10",
+            rest: "60 saniye",
+            notes: "Sırtınızı destekleyin ve omurganızı nötr pozisyonda tutun."
+          },
+          {
+            name: "Romanian Deadlifts",
+            sets: 3,
+            reps: "10-12",
+            rest: "60 saniye",
+            notes: "Sırtınızı düz tutun ve kalçalarınızı geriye doğru itin."
+          },
+          {
+            name: "Plank",
+            sets: 3,
+            reps: "45-60 saniye",
+            rest: "45 saniye",
+            notes: "Vücudunuzu düz bir çizgide tutun, kalçalarınızı düşürmeyin."
+          },
+        ],
+      },
+      Push: {
+        name: "Push",
+        exercises: [
+          {
+            name: "Dumbbell Bench Press",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı bench'e sabitleyin ve kontrollü hareket edin."
+          },
+          {
+            name: "Seated Dumbbell Shoulder Press",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Sırtınızı destekleyin ve omurganızı nötr pozisyonda tutun."
+          },
+          {
+            name: "Incline Push-ups",
+            sets: 3,
+            reps: "10-15",
+            rest: "60 saniye",
+            notes: "Ellerinizi yüksek bir yüzeye koyun, vücudunuzu düz tutun."
+          },
+          {
+            name: "Lateral Raises",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Kollarınızı yavaşça kaldırın, dirseklerinizi hafif bükün."
+          },
+          {
+            name: "Tricep Dips",
+            sets: 3,
+            reps: "10-15",
+            rest: "45 saniye",
+            notes: "Omuzlarınızı aşağıda tutun, gerekirse ayaklarınızı yerden kaldırmayın."
+          },
+        ],
+      },
+      Pull: {
+        name: "Pull",
+        exercises: [
+          {
+            name: "Assisted Pull-ups",
+            sets: 4,
+            reps: "6-8",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı geriye ve aşağıya doğru çekin."
+          },
+          {
+            name: "Bent Over Dumbbell Rows",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve dirseklerinizi yukarı çekin."
+          },
+          {
+            name: "Face Pulls",
+            sets: 3,
+            reps: "12-15",
+            rest: "60 saniye",
+            notes: "Omuzlarınızı geriye doğru çekin ve sıkın."
+          },
+          {
+            name: "Reverse Flyes",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Üst sırtınızı sıkın ve kollarınızı yanlara doğru kaldırın."
+          },
+          {
+            name: "Hammer Curls",
+            sets: 3,
+            reps: "10-12",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi sabit tutun ve kontrollü hareket edin."
+          },
+        ],
+      },
+      Upper: {
+        name: "Upper",
+        exercises: [
+          {
+            name: "Incline Dumbbell Bench Press",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Omuzlarınızı bench'e sabitleyin ve dirseklerinizi kontrollü indirin."
+          },
+          {
+            name: "Seated Cable Row",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve omuzlarınızı geriye çekin."
+          },
+          {
+            name: "Arnold Press",
+            sets: 3,
+            reps: "10-12",
+            rest: "60 saniye",
+            notes: "Hareketi yavaş ve kontrollü bir şekilde yapın."
+          },
+          {
+            name: "Lat Pulldown",
+            sets: 3,
+            reps: "10-12",
+            rest: "60 saniye",
+            notes: "Sırtınızı hafifçe arkaya yatırın ve göğsünüze doğru çekin."
+          },
+          {
+            name: "Tricep Pushdowns",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi yanlarınıza sabit tutun."
+          },
+          {
+            name: "Bicep Curls",
+            sets: 3,
+            reps: "12-15",
+            rest: "45 saniye",
+            notes: "Dirseklerinizi sabit tutun ve kontrollü hareket edin."
+          },
+        ],
+      },
+      Lower: {
+        name: "Lower",
+        exercises: [
+          {
+            name: "Goblet Squats",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve ağırlığı göğsünüze yakın tutun."
+          },
+          {
+            name: "Romanian Deadlifts",
+            sets: 4,
+            reps: "8-10",
+            rest: "90 saniye",
+            notes: "Sırtınızı düz tutun ve kalçalarınızı geriye doğru itin."
+          },
+          {
+            name: "Walking Lunges",
+            sets: 3,
+            reps: "10-12 her bacak",
+            rest: "60 saniye",
+            notes: "Adımlarınızı kontrollü atın ve dik durun."
+          },
+          {
+            name: "Leg Press",
+            sets: 3,
+            reps: "12-15",
+            rest: "60 saniye",
+            notes: "Sırtınızı koltuğa yaslayın ve kontrollü hareket edin."
+          },
+          {
+            name: "Standing Calf Raises",
+            sets: 4,
+            reps: "15-20",
+            rest: "30 saniye",
+            notes: "Hareketin en üst noktasında bir an durun."
+          },
+        ],
+      },
+    },
+    cardio: "25 dakika interval koşu (30 saniye hızlı, 90 saniye yavaş)",
+    cooldown: "15 dakika yoga temelli germe ve gevşeme egzersizleri",
   },
 };
 
 export const phases = [
-  "Phase 1: Foundation Building (Weeks 1-7)",
-  "Phase 2: Strength and Aesthetics Development (Weeks 8-14)",
-  "Phase 3: Performance and Appearance Optimization (Weeks 15-21)",
+  "Faz 1: Temel Oluşturma (1-7. Haftalar)",
+  "Faz 2: Güç ve Estetik Geliştirme (8-14. Haftalar)",
+  "Faz 3: Performans ve Görünüm Optimizasyonu (15-21. Haftalar)",
 ];
 
 export const trainingDays = [2, 3, 4, 5];
@@ -739,14 +1134,14 @@ export const splitOptions = ["Full Body", "Push", "Pull", "Upper", "Lower"];
 export const phaseDetails = {
   1: {
     focus:
-      "Establishing baseline fitness, improving muscular endurance, and initiating fat loss",
+      "Temel fitness seviyesini oluşturma, kas dayanıklılığını geliştirme ve yağ yakımını başlatma",
     nutritionTips: [
-      "Create a slight caloric deficit",
-      "Focus on high-protein intake",
-      "Emphasize whole foods and complex carbohydrates",
+      "Hafif bir kalori açığı oluşturun",
+      "Yüksek protein alımına odaklanın",
+      "Tam gıdalara ve kompleks karbonhidratlara ağırlık verin",
     ],
     progressionStrategy:
-      "Gradually increase volume (reps and sets) week by week",
+      "Hafta hafta hacmi (tekrar ve set sayısını) kademeli olarak artırın",
     recommendedSplits: {
       2: ["Full Body", "Full Body"],
       3: ["Full Body", "Full Body", "Full Body"],
@@ -756,14 +1151,14 @@ export const phaseDetails = {
   },
   2: {
     focus:
-      "Building strength and muscle mass while continuing to improve body composition",
+      "Vücut kompozisyonunu iyileştirmeye devam ederken güç ve kas kütlesi inşa etme",
     nutritionTips: [
-      "Increase caloric intake slightly",
-      "Maintain high protein intake",
-      "Time carbohydrates around workouts",
+      "Kalori alımını hafifçe artırın",
+      "Yüksek protein alımını sürdürün",
+      "Karbonhidratları antrenmanlar etrafında zamanlayın",
     ],
     progressionStrategy:
-      "Progressive overload by increasing weights and decreasing reps",
+      "Ağırlıkları artırıp tekrarları azaltarak progresif yüklenme uygulayın",  
     recommendedSplits: {
       2: ["Upper", "Lower"],
       3: ["Push", "Pull", "Full Body"],
@@ -773,14 +1168,14 @@ export const phaseDetails = {
   },
   3: {
     focus:
-      "Refining physique, enhancing athletic performance, and peak conditioning",
+      "Fiziği iyileştirme, atletik performansı artırma ve zirve kondisyona ulaşma",
     nutritionTips: [
-      "Fine-tune caloric intake based on individual goals",
-      "Optimize meal timing for performance",
-      "Consider targeted supplementation (e.g., creatine, BCAAs)",
+      "Kalori alımını bireysel hedeflere göre ince ayarlayın",
+      "Performans için öğün zamanlamasını optimize edin",
+      "Hedefli takviyeler düşünün (örn. kreatin, BCAA'lar)",
     ],
     progressionStrategy:
-      "Incorporate advanced techniques like drop sets, supersets, and periodization",
+      "Drop setler, süpersetler ve periyodizasyon gibi ileri teknikleri dahil edin",
     recommendedSplits: {
       2: ["Push", "Pull"],
       3: ["Push", "Pull", "Full Body"],
